@@ -23,6 +23,7 @@ plot(
   col="red"
 )
 # Adapt LB test to determine ARCH effect
+# small p-value indicate ARCH effect
 Box.test((rtn.var1 - mean(rtn.var1))^2, 
          lag=12, type="Ljung")
 acf(rtn.var1,lag.max=30,main="")
